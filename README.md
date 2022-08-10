@@ -23,3 +23,10 @@ your preferred browser.
 ```sh
 127.0.0.1:8082
 ```
+Create .env on the project root directory
+Provide the following keys with your own value:
+- MONSTER_TOKEN
+- BSN_DDC_API_TOKEN
+- PRIVATE_KEY
+
+You would also need to update your own cnfiguration in config/default.json.

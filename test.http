@@ -1,0 +1,19 @@
+GET http://localhost:8082/ HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:8082/getbalance/0x34a9bb477239a759b6086e70aa72668174df3ee3 HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:8082/gettotalddc/0x34a9bb477239a759b6086e70aa72668174df3ee3 HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://127.0.0.1:8082/qbsnddc HTTP/1.1
+Content-Type: application/json
+
+###

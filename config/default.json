@@ -1,0 +1,14 @@
+{
+    "BSNDDC": {
+        "OpenApi": {
+            "urlBase": "https://openapi-ddc.bsnbase.com"
+        },
+        "gatewayUrlBase": "https://opbningxia.bsngate.com:18602",
+        "explorerUrlBase": "http://explorer.ope.bsnbase.com",
+        "DDC721Address": "0xad3B52B4F4bd9198DC69dD9cE4aC9846667461a2"
+    },
+    "projectId": "c323cd75e504450fb221b390c7fae7e5",
+    "chainAddress": "0x34a9bb477239a759b6086e70aa72668174df3ee3",
+    "minMintingBalance": 1000000000000000,
+    "port": 8082
+}

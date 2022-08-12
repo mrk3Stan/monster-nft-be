@@ -30,10 +30,10 @@ const fileStorage = multer.diskStorage({
 app.use(cors())
 app.use(bodyParser.json())  // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
-app.use(multer({storage: fileStorage}).single('upload'))
+app.use(multer({storage: fileStorage}).single('file'))
 
 app.get('/', (_, res) => {
-    res.status(200).send("Monster Mint NFT!")
+    res.status(200).send("Neptune Digital Monster Generator!")
 })
 
 app.get('/mintcheck/:address', async (req, res) => {
@@ -50,12 +50,13 @@ app.get('/mintcheck/:address', async (req, res) => {
 app.post('/mint', async (req, res) => {
     const ddcUri = await uploadToWeb3Storage(`uploads/${req.file.originalname}`)
     const explorerLink = await mintNFT(ddcUri)
-    const [jsonUri, ddcId] = await generateAndUploadJson(req.body, ddcUri)
-    let explorerLink2 = ""
-    if (ddcId !== 0) {
-        explorerLink2 = await setUri(jsonUri, ddcId)
-    }
-    res.status(200).send(`Explorer URL - ${explorerLink} | ${explorerLink2}`)
+    // const [jsonUri, ddcId] = await generateAndUploadJson(req.body, ddcUri)
+    // let explorerLink2 = ""
+    // if (ddcId !== 0) {
+    //     explorerLink2 = await setUri(jsonUri, ddcId)
+    // }
+    console.log(explorerLink)
+    res.status(200).send(`Explorer URL - ${explorerLink}`)
 })
 
 app.get('/getbalance/:address', async (req, res) => {
